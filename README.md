@@ -6,13 +6,47 @@ En este repositorio estare documentando lo aprendido con FLET, de las explicacio
 
 FLET es un framework de código abierto que permite crear aplicaciones multiplataforma utilizando Python. Con FLET, puedes desarrollar aplicaciones web, de escritorio y móviles con una sola base de código, lo que facilita el proceso de desarrollo y mantenimiento.
 
+## Requisitos Previos
+
+### Instalación de Python
+
+Flet recomienda tener instalado Python 3.7 o superior. De preferencia utiliza la version 3.12.x. También es recomendable crear un entorno virtual con la version de python especifica, por ejemplo:
+
+```bash
+python -3.12 -m venv venv
+.\venv\Scripts\activate
+```
+
+### Instalar Flutter
+
+Flet utiliza Flutter para compilar aplicaciones móviles. Sigue estos pasos para instalar Flutter:
+
+1. Descarga Flutter desde su [sitio oficial](https://docs.flutter.dev/get-started/quick).
+2. Activar las licencias de Flutter:
+
+      ```bash
+      flutter doctor --android-licenses
+      ```
+
+3. Verificar flutter en terminal:
+
+      ```bash
+      flutter doctor
+      ```
+
+Esto mostrará el estado de tu instalación de Flutter y te indicará si hay algún componente faltante.
+
+### Generar APK
+
+- Tener Java JDK 17 o superior
+- Tener instalado Android SDK / Android Studio
+- Aceptar las licencias del SDK
+
 ## Instalación de FLET
 
 Es recomendable crear un entorno virtual para tu proyecto. Puedes hacerlo utilizando `venv`:
 
 ```bash
-python -m venv venv
-.\venv\Scripts\activate
 pip install flet
 ```
 
@@ -86,18 +120,4 @@ Al ejecutar el comando `flet build apk`, Flet busca por defecto el archivo `main
 
 ```bash
 flet build apk --module-name mi_app.py
-```
-
----
-
-### Requisitos para generar APK
-
-Tener Java JDK 17 o superior
-
-Tener instalado Android SDK / Android Studio
-
-Aceptar las licencias del SDK:
-
-```bash
-sdkmanager --licenses
 ```
