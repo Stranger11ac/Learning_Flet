@@ -12,7 +12,7 @@ Es recomendable crear un entorno virtual para tu proyecto. Puedes hacerlo utiliz
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows usa `venv\Scripts\activate`
+.\venv\Scripts\activate
 pip install flet
 ```
 
@@ -82,10 +82,10 @@ build/
 
 ### Notas adicionales
 
-Al ejecutar el comando `flet build apk`, Flet busca por defecto el archivo `main.py` en el directorio actual. Si tu archivo principal tiene un nombre diferente o está ubicado en otra carpeta, debes especificar la ruta correcta utilizando el parámetro `--target`. Por ejemplo, si tu archivo principal se llama `mi_app.py`, el comando sería:
+Al ejecutar el comando `flet build apk`, Flet busca por defecto el archivo `main.py` en el directorio actual. Si tu archivo principal tiene un nombre diferente o está ubicado en otra carpeta, debes especificar la ruta correcta utilizando el parámetro `--module-name`. Por ejemplo, si tu archivo principal se llama `mi_app.py`, el comando sería:
 
 ```bash
-flet build apk --target mi_app.py
+flet build apk --module-name mi_app.py
 ```
 
 ---
@@ -101,4 +101,3 @@ Aceptar las licencias del SDK:
 ```bash
 sdkmanager --licenses
 ```
-
