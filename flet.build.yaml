@@ -1,0 +1,5 @@
+app:
+  icon: assets/favicon.png
+
+  splash:
+    image: assets/favicon.png
