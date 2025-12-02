@@ -1,1 +1,4 @@
+.hash/
+build/flutter/
+build/site-packages/
 venv/
