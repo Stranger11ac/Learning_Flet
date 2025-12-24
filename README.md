@@ -54,15 +54,19 @@ pip install flet
 
 La primer aplicacion que se creó es [Hola Mundo](./hello_world.py)
 
-### Ejecución de la aplicación
+### Ejecutar aplicacion de escritorio
 
 Para ejecutar la aplicación, utiliza el siguiente comando en tu terminal:
 
 ```bash
-python hello_world.py
+flet run
 ```
 
-Esto iniciará una aplicación de escritorio que muestra un mensaje de "Hola, Mundo!" en la ventana.
+```bash
+flet run hello_world.py
+```
+
+Esto iniciará una aplicación que muestra un mensaje de "Hola, Mundo!" en la ventana.
 
 ---
 
@@ -71,7 +75,11 @@ Esto iniciará una aplicación de escritorio que muestra un mensaje de "Hola, Mu
 Para ejecutar la aplicación en el navegador, utiliza el siguiente comando en tu terminal:
 
 ```bash
-python hello_world.py --web
+flet run --web hello_world.py
+```
+
+```bash
+flet run --web --port 8000 hello_world.py
 ```
 
 Esto iniciará un servidor local y abrirá la aplicación en tu navegador web predeterminado.
@@ -79,6 +87,7 @@ Tambien se puede definir en el codigo pa forma de ejecucion, en este caso para w
 En lugar de usar:
 
 ```python
+ft.app(main)
 ft.app(target=main)
 ```
 
