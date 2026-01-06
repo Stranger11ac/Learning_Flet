@@ -8,13 +8,17 @@ def main(page: ft.Page):
 
     def minus_click(e):
         txt_number.value = str(int(txt_number.value) - 1)
-        if int(txt_number.value) <= 0:
+        if int(txt_number.value) == 0:
+            txt_number.bgcolor = ft.Colors.GREY_800
+        elif int(txt_number.value) < 0:
             txt_number.bgcolor = ft.Colors.RED_800
         page.update()
 
     def plus_click(e):
         txt_number.value = str(int(txt_number.value) + 1)
-        if int(txt_number.value) > 0:
+        if int(txt_number.value) == 0:
+            txt_number.bgcolor = ft.Colors.GREY_800
+        elif int(txt_number.value) > 0:
             txt_number.bgcolor = ft.Colors.BLUE_800
         page.update()
 
